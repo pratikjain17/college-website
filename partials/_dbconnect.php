@@ -1,8 +1,8 @@
 <?php 
-        // $servername = "localhost";
-        // $username = "root";
-        // $password = "";
-        // $database = "collegewebsite";
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "collegewebsite";
 
 
     

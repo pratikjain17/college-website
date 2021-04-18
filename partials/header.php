@@ -1,6 +1,6 @@
 <?php
-    session_start();
-    echo ' <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+session_start();
+echo ' <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php">
             <h4><i class="fas fa-school"></i> NMS</h4>
@@ -30,47 +30,44 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contactform" tabindex="-1" aria-disabled="false"><i class="fas fa-phone"></i> Contact us</a>
+                    <a class="nav-link" href="partials/contact.php" tabindex="-1" aria-disabled="false"><i class="fas fa-phone"></i> Contact us</a>
                 </li>
             </ul>';
-            if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
-                echo '<form class="form-inline my-2 my-lg-0" action="search.php" method="get">
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+    echo '<form class="form-inline my-2 my-lg-0" action="search.php" method="get">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" name="query" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                <p class = "my-2 mx-2" style="color:white;">Welcome <br>' .$_SESSION['studentusername']. '</p>
+                <p class = "my-2 mx-2" style="color:white;">Welcome <br>' . $_SESSION['studentusername'] . '</p>
                 <a href = "partials/_logout.php" class="btn btn-danger ml-2">Logout</a>
               </form>';
-            }
-            elseif(isset($_SESSION['adminloggedin']) && $_SESSION['adminloggedin'] == true){
-                echo '<form class="form-inline my-2 my-lg-0">
+} elseif (isset($_SESSION['adminloggedin']) && $_SESSION['adminloggedin'] == true) {
+    echo '<form class="form-inline my-2 my-lg-0">
                 <a class="btn btn-outline-success my-2 my-sm-0" href="admin/dashboard.php">Admin Panel</a>
-                <p class = "my-2 mx-2" style="color:white;">Welcome <br>' .$_SESSION['adminEmail']. '</p>
+                <p class = "my-2 mx-2" style="color:white;">Welcome <br>' . $_SESSION['adminEmail'] . '</p>
                 <a href = "partials/_logout.php" class="btn btn-danger ml-2">Logout</a>
               </form>';
-            }
-            else{
-                echo'
+} else {
+    echo '
                 <a class="nav-link" href="partials/adminLoginModal.php"  data-bs-toggle="modal" data-bs-target="#adminModal"><button type="button" class="btn btn-danger">Admin Login</button></a>
             ';
-            }
-            
-        echo'</div>
+}
+
+echo '</div>
     </div>
 </nav>';
 include 'partials/loginModal.php';
 include 'partials/signupModal.php';
 include 'partials/adminLoginModal.php';
 
-if(isset($_GET['signupSuccess']) && $_GET['signupSuccess'] == "true"){
+if (isset($_GET['signupSuccess']) && $_GET['signupSuccess'] == "true") {
     echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
                   <strong>Successfully done: </strong> You can now login.
                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>';
 }
-if(isset($_GET['error']) && $_GET['error'] == "Unable to login"){
+if (isset($_GET['error']) && $_GET['error'] == "Unable to login") {
     echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
     Email or password is not correct || Unable to login
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>';
-  }   
-?>
+}

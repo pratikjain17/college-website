@@ -81,7 +81,7 @@
         </div>
     </div>
 
-    <?php include "partials/contact.php" ?>
+  
     <?php include "partials/footer.php" ?>
 
     

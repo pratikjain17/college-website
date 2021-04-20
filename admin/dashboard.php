@@ -90,6 +90,17 @@
                 <a href="students.php?query=active" class="btn btn-success" style="width:5rem;"> <i class="fa fa-arrow-right"></i></a>
             </div>    
         </div>
+    </div>
+    <div class="col-md-4 my-2" style="display:inline-block;">
+        <div class="card gal--animation gal--part bg-dark text-white" style="width: 18rem;">
+            <div class="card-body text-white">
+                <h5 class="card-title"> <i class="fa fa-users fa-3x"></i> Suggestion Panel : '.$row2.'</h5>
+                <p class="card-text">All the list of Suggestion</p>
+            </div>
+            <div class="card-footer">
+                <a href="suggestionPanel.php" class="btn btn-success" style="width:5rem;"> <i class="fa fa-arrow-right"></i></a>
+            </div>    
+        </div>
     </div>';
       }
       ?>

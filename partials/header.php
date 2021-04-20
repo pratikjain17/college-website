@@ -71,3 +71,12 @@ if (isset($_GET['error']) && $_GET['error'] == "Unable to login") {
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>';
 }
+
+if (isset($_GET['suggestion']) && $_GET['suggestion'] == "success") {
+    echo '<div class="alert alert-success" role="alert">
+    Your Suggestion has been successfully submitted !!!
+  </div>';
+}
+
+
+

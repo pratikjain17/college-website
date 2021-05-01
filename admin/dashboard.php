@@ -56,6 +56,9 @@
       $result1 = mysqli_query($conn,$sql1);
       $row1 = mysqli_num_rows($result1);
       $row2 = $row - $row1;
+      $sql2 = "SELECT * FROM `suggestion`";
+      $result2 = mysqli_query($conn,$sql2);
+      $row3 = mysqli_num_rows($result2);
 
       if (isset($_SESSION['adminloggedin']) && $_SESSION['adminloggedin'] == true) {
         echo '<div class="col-md-4 my-2" style="display:inline-block;">
@@ -94,7 +97,7 @@
     <div class="col-md-4 my-2" style="display:inline-block;">
         <div class="card gal--animation gal--part bg-dark text-white" style="width: 18rem;">
             <div class="card-body text-white">
-                <h5 class="card-title"> <i class="fa fa-users fa-3x"></i> Suggestion Panel : '.$row2.'</h5>
+                <h5 class="card-title"> <i class="fa fa-users fa-3x"></i> Suggestion Panel : '.$row3.'</h5>
                 <p class="card-text">All the list of Suggestion</p>
             </div>
             <div class="card-footer">

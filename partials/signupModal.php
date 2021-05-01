@@ -30,20 +30,32 @@
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Gender</label> <br>
                         <input type="radio" name="gender" value="Male" required>Male <br>
-						<input type="radio" name="gender" value="Female">Female
+                        <input type="radio" name="gender" value="Female">Female
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Address</label>
                         <textarea class="form-control" id="address" name="address" rows="3"></textarea>
                     </div>
                     <div class="form-group">
+                        <label for="exampleFormControlSelect1">Select Courses</label>
+                        <select class="form-control" id="courses" name="courses" required>
+                            <?php
+                            $sql = "SELECT * FROM `courses`";
+                            $result = mysqli_query($conn, $sql);
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                $course_id = $row['course_id'];
+                                $course_name = $row['course_name'];
+
+                                echo '<option value="' . $course_id . '">' . $course_name . '</option>';
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label for="exampleFormControlTextarea1">Photo</label> <br>
                         <input class="input" type="file" name="image" required>
                     </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="signupCheck">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
+
                     <button type="submit" class="btn btn-primary">Submit</button>
             </div>
             <div class="modal-footer">

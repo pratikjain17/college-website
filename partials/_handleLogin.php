@@ -17,6 +17,7 @@
                     $_SESSION['studentid'] = $row['student_id'];
                     $_SESSION['studentemail'] = $email;
                     $_SESSION['studentusername'] = $row['student_username'];
+                    $_SESSION['studentCourse'] = $row['student_course_id'];
                     echo "logged in". $email;
                     header("Location: /college-website/student/dashboard.php");
                 }
@@ -30,4 +31,3 @@
             header("Location: /college-website/index.php?error=$error");   
         }
     }
-?>

@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://bootswatch.com/4/pulse/bootstrap.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <title>Kushal school</title>
     <style>
@@ -20,7 +20,8 @@
             flex-direction: column;
 
         }
-        .listy{
+
+        .listy {
             max-height: 50vh;
             overflow-y: auto;
         }
@@ -62,22 +63,32 @@
         <div class="container row">
             <?php
             if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-                $sql1 = "SELECT * FROM `notes`";
-                $result = mysqli_query($conn, $sql1);
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $notesTilte = $row['notes_title'];
-                    $notesDesc = $row['notes_description'];
-                    $notesFile = $row['notes_file'];
-                    echo '<div class="list-group my-2 listy">
-                    <a href="../notes/'.$notesFile.'" class="list-group-item list-group-item-action flex-column align-items-start active bg-primary">
+                $email = $_SESSION['studentemail'];
+                $query = "SELECT * FROM `students` WHERE `student_email` LIKE '$email'";
+                $q_res = mysqli_query($conn, $query);
+                $row = mysqli_fetch_assoc($q_res);
+                $status = $row['student_status'];
+                if ($status == 0) {
+                    echo '<h2 class="text-center" style="color:red;">You are not active student to view the assignment,Please wait for the admin to accept</h2>';
+                } else {
+                    $course = $_SESSION['studentCourse'];
+                    $sql1 = "SELECT * FROM `notes` WHERE `notes_course_id` = $course";
+                    $result = mysqli_query($conn, $sql1);
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $notesTilte = $row['notes_title'];
+                        $notesDesc = $row['notes_description'];
+                        $notesFile = $row['notes_file'];
+                        echo '<div class="list-group my-2 listy">
+                    <a href="../notes/' . $notesFile . '" class="list-group-item list-group-item-action flex-column align-items-start active bg-primary">
                   <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1"><strong>'.$notesTilte.'</strong></h5>
+                    <h5 class="mb-1"><strong>' . $notesTilte . '</strong></h5>
                     <small>by NMS</small>
                   </div>
-                  <p class="mb-1">'.$notesDesc.'</p>
+                  <p class="mb-1">' . $notesDesc . '</p>
                   <small>Donec id elit non mi porta.</small>
                 </a>
               </div>';
+                    }
                 }
             } else {
                 echo '<h2 class="text-center" style="color:red;">You are not logged in to view the dashboard</h2>

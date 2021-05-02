@@ -155,6 +155,7 @@
                                 <th scope="col">User Name</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Photo</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>';
@@ -171,6 +172,7 @@
                     <td>'.$studentUsername.'</td>
                     <td>'.$studentEmail.'</td>
                     <td><img src="../img/'.$studentPhoto.'" alt=""></td>
+                    <td><a href="deleteStudent.php?id='.$studentId.'" class="btn btn-danger">Delete</a></td>
                   </tr>';
                 }
 
@@ -179,6 +181,7 @@
             }
         ?>
     </div>
+    
     
 
 

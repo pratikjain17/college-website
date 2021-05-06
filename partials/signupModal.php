@@ -52,6 +52,14 @@
             </select>
           </div>
           <div class="form-group">
+            <label for="exampleFormControlSelect1">Select Year</label>
+            <select class="form-control" id="courses" name="courses" required>
+             <option value="1">First Year</option>
+             <option value="2">Second Year</option>
+             <option value="3">Third Year</option>
+            </select>
+          </div>
+          <div class="form-group">
             <label for="exampleFormControlTextarea1">Photo</label> <br>
             <input class="input" type="file" name="image" required>
           </div>

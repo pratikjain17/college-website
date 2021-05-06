@@ -7,20 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://bootswatch.com/4/pulse/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <style>
-    .style {
-        font-size: large;
-        font-family: sans-serif;
-    }
+        .style {
+            font-size: large;
+            font-family: sans-serif;
+        }
 
-    .display-image img {
-        width: 100%;
-        height: 300px;
-    }
+        .display-image img {
+            width: 100%;
+            height: 300px;
+        }
     </style>
 
     <title>Kushal - About us</title>
@@ -28,9 +27,9 @@
 
 <body>
     <!-- database yaha connect karna -->
-    <?php   include "partials/_dbconnect.php"; ?>
+    <?php include "partials/_dbconnect.php"; ?>
     <!-- Heade idhar include kiya -->
-    <?php   include "partials/header.php"; ?>
+    <?php include "partials/header.php"; ?>
 
     <div class="aboutus-section style animate__animated animate__fadeInUp">
         <div class="display-image">
@@ -41,14 +40,10 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="aboutus">
                         <h2 class="aboutus-title" style="font-size: 50px;">About Us</h2>
-                        <p class="aboutus-text"> Sci High’s unique branding is evident throughout their website. Their
-                            brand colors and distinct font is nicely incorporated into the web design. Their mission is
-                            displayed upfront on the homepage along with stunning imagery and video footage to help
-                            paint a picture of what it is like to attend this school.
-
-                            Sci High’s website has dedicated pages for news and events in an easily digestible blog
-                            format. Site visitors can scroll through the news page to see recent stories or click
-                            through their events calendar to find out about upcoming events.</p>
+                        <p class="aboutus-text"> As an institution its purpose is to impart quality education to students of all creeds in general and the Gujarati Linguistic Minority in particular. <br>
+                         The college strives to develop the intellectual powers of students and all concerned, continuously and consistently through methods that are participative, interactive and facilitative in a measurable manner. Also to train them to be responsible and worthy citizens by adopting change in its path.
+                            The college offers a number of traditional and self financing under graduate and post graduate courses that are affiliated to University Of Mumbai, imparting education to about 7,000 students who reside in and around this fast growing suburb. A perfect blend of dedicated and forward looking Management and committed Teaching and Non Teaching Staff have ensured that the college is on the right trend and have steered it in the right direction.
+                            The greatest strength of the college is that it is managed by academicians, who not only understand and respect the value of education and educationists but also believe that knowledge is power and the value of knowledge lies not in its accumulation but in its utilization.</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
@@ -62,9 +57,8 @@
                                     <span class="glyphicon glyphicon-cog icon"></span>
                                 </div>
                                 <div class="feature-content">
-                                    <h4>Work with heart</h4>
-                                    <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
-                                        vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in.</p>
+                                    
+                                    
                                 </div>
                             </div>
                         </div>
@@ -74,9 +68,7 @@
                                     <span class="glyphicon glyphicon-cog icon"></span>
                                 </div>
                                 <div class="feature-content">
-                                    <h4>Reliable services</h4>
-                                    <p>Donec vitae sapien ut libero venenatis faucibu. Nullam quis ante. Etiam sit amet
-                                        orci eget eros faucibus tincidunt</p>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -86,9 +78,7 @@
                                     <span class="glyphicon glyphicon-cog icon"></span>
                                 </div>
                                 <div class="feature-content">
-                                    <h4>Great support</h4>
-                                    <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
-                                        vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in.</p>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -106,8 +96,7 @@
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
     </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->

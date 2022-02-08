@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 01, 2021 at 11:59 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.1
+-- Generation Time: Feb 08, 2022 at 06:34 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -58,10 +59,10 @@ CREATE TABLE `assignments` (
 --
 
 INSERT INTO `assignments` (`assignment_id`, `assignment_title`, `assignment_description`, `assignment_file`, `assignment_course_id`) VALUES
-(1, 'Java Assignment', 'You can practice a variety range of questions in Java', 'java.pdf', 0),
-(2, 'Android Data Fundamentals', 'Here are some of the android fundamentals that you can learn and practice', 'android-data-fundatments.pdf', 0),
-(3, 'Theory of Computation', 'Theory of Computation Assignment 1', 'theory-of-computation1.pdf', 0),
-(4, 'Theory of Computation', 'Theory of Computation Assignment 2', 'theory-of-computation2.pdf', 0);
+(1, 'Java Assignment', 'You can practice a variety range of questions in Java', 'java.pdf', 1),
+(2, 'Android Data Fundamentals', 'Here are some of the android fundamentals that you can learn and practice', 'android-data-fundatments.pdf', 2),
+(3, 'Theory of Computation', 'Theory of Computation Assignment 1', 'theory-of-computation1.pdf', 3),
+(4, 'Theory of Computation', 'Theory of Computation Assignment 2', 'theory-of-computation2.pdf', 1);
 
 -- --------------------------------------------------------
 
@@ -104,11 +105,11 @@ CREATE TABLE `notes` (
 --
 
 INSERT INTO `notes` (`notes_id`, `notes_title`, `notes_description`, `notes_file`, `notes_course_id`) VALUES
-(1, 'Java ServLet', 'Learn about Java servlet in very detailed way.', 'java-servlet.pdf', 0),
-(2, 'Java Swing', 'The Brand New Java Swing Technology to learn', 'java-swing.pdf', 0),
-(3, 'Android Writeup 1', 'Learn the basics of android technology', 'writeup1.pdf', 0),
-(4, 'Android Writeup 1', 'Learn the basics of android technology', 'writeup2.pdf', 0),
-(5, 'Adroid Datepicker Library', 'Learn about the android datepicker library and practice for better', 'datepicker.pdf', 0);
+(1, 'Java ServLet', 'Learn about Java servlet in very detailed way.', 'java-servlet.pdf', 2),
+(2, 'Java Swing', 'The Brand New Java Swing Technology to learn', 'java-swing.pdf', 1),
+(3, 'Android Writeup 1', 'Learn the basics of android technology', 'writeup1.pdf', 3),
+(4, 'Android Writeup 1', 'Learn the basics of android technology', 'writeup2.pdf', 3),
+(5, 'Adroid Datepicker Library', 'Learn about the android datepicker library and practice for better', 'datepicker.pdf', 1);
 
 -- --------------------------------------------------------
 
@@ -138,9 +139,13 @@ INSERT INTO `students` (`student_id`, `student_username`, `student_email`, `stud
 (4, 'Rayman', 'rayman1@gmail.com', '$2y$10$5lBCCpQFYoAJgjygYkMOFO0siOqizUwMgagWojbFY0uFM50gIzqEC', 'Male', 2, 'joker.png', 'Jaipur Rajasthan India', 1, '2021-02-24 00:05:30'),
 (5, 'anil11', 'anil@gmail.com', '$2y$10$Z7.NkQ1TnbJxE27Pd//BgurHHmItYtAJprfSKOz/AmN9q6Kw0V1iO', 'Male', 3, 'Drag and Drop.png', 'Kolkata West Bengal India', 0, '2021-02-24 00:06:45'),
 (6, 'kinni02', 'patyalkinni@gmail.com', '$2y$10$DdQew1XWn5kB3xBxbxcTC.CdbSRUH4LKSTBIg2VwIeOTIkU68MbTe', 'Female', 1, 'Curtain menu thumbnail.png', 'Mira Road Mumbai Maharashtra India', 0, '2021-02-24 00:18:20'),
-(8, 'abhishek12', 'abhishek.jain7474@gmail.com', '$2y$10$Ip3vPIBkJKrxxgtj4mehouEC1toV61huRyHUYuwJ2ES1zNoZFKUdC', 'Male', 0, 'calci js 2.png', 'mira road', 1, '2021-02-24 12:44:19'),
-(10, 'bipin', 'bipin@gmail.com', '$2y$10$jlVEOyA1jf8fxutFIL4Wh.EBtLyGdFvy6Fw17BqGzgKU2mAsjAvoe', 'Male', 0, 'Screenshot (2).png', 'golden nest', 0, '2021-02-25 14:38:56'),
-(11, 'pj', 'pratik@gmail.com', '$2y$10$JPy7wkJyiIVkAwkbNxK9VOrJJevEvu7Rwa.XKZpv7ScOg8m2O055O', 'Male', 0, 'Screenshot (2).png', 'Mira road', 0, '2021-05-01 15:03:35');
+(8, 'abhishek12', 'abhishek.jain7474@gmail.com', '$2y$10$Ip3vPIBkJKrxxgtj4mehouEC1toV61huRyHUYuwJ2ES1zNoZFKUdC', 'Male', 1, 'calci js 2.png', 'mira road', 1, '2021-02-24 12:44:19'),
+(10, 'bipin', 'bipin@gmail.com', '$2y$10$jlVEOyA1jf8fxutFIL4Wh.EBtLyGdFvy6Fw17BqGzgKU2mAsjAvoe', 'Male', 2, 'Screenshot (2).png', 'golden nest', 0, '2021-02-25 14:38:56'),
+(11, 'pj', 'pratik@gmail.com', '$2y$10$JPy7wkJyiIVkAwkbNxK9VOrJJevEvu7Rwa.XKZpv7ScOg8m2O055O', 'Male', 3, 'Screenshot (2).png', 'Mira road', 0, '2021-05-01 15:03:35'),
+(12, 'kol', 'kol@gmail.com', '$2y$10$67WrM.0AJxNOrTIVe83cRu1/U/Tt26AZ1eSpQretPqKfgCO38rMQ2', 'Male', 3, 'calci js 2.png', 'kol', 0, '2021-05-06 07:53:59'),
+(13, 'abhishek', 'abc@gmail.com', '$2y$10$XXEJXRiGYn1Xv2zFO0W9/u7wMe.Qy5RikIbH8M8rcHlaMrb0tJnbG', 'Male', 1, 'abhishek_mhtcet.jpg', 'C-301 Sheetal Sarita Sheetal Nagar Mira Road East\r\nDistrict Thane\r\nMumbai,Maharashtra', 0, '2021-11-08 20:48:23'),
+(14, 'Amber', 'amber@gmail.com', '$2y$10$oJoTLsXR7dRzWEr4LMDXWO34o0zErrdq39i/BiJ5uGm30qHigdTu2', 'Male', 1, 'julen-urrutia-batmansculptv1.jpg', 'Amber House', 1, '2022-02-08 20:11:54'),
+(15, 'q', 'q@gmail.com', '$2y$10$aCKdgUlkc1yYTQBLQ.nSUeSvvxupY9QV8tGeaSN3eQ67SOBlWo.7W', 'Male', 1, 'prYAChn - Imgur.png', 'q 123', 1, '2022-02-08 20:24:48');
 
 -- --------------------------------------------------------
 
@@ -215,7 +220,7 @@ ALTER TABLE `notes`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `student_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `student_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `suggestion`

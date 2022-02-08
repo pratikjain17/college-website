@@ -65,7 +65,7 @@
         $studentEmail = $_POST['student_email'];
         $studentAddress = $_POST['student_address'];
         $studentPhoto = $_FILES['student_photo']['name'];
-        $destination = "C:/xampp/htdocs/college-website/img/".basename($_FILES['student_photo']['name']);
+        $destination = "D:/xampp/htdocs/college-website/img/".basename($_FILES['student_photo']['name']);
         move_uploaded_file($_FILES['student_photo']['tmp_name'],$destination);
         $sql_query = "UPDATE `students` SET `student_username` = '$studentUsername',`student_email` = '$studentEmail',`student_photo` = '$studentPhoto',`student_address` = '$studentAddress' WHERE `students`.`student_id` = $studentId";
         $_SESSION['studentusername'] = $studentUsername;

@@ -10,7 +10,7 @@
         $student_course = $_POST['courses'];
         $student_address = $_POST['address'];
         $student_photo = $_FILES['image']['name'];
-        $destination = "C:/xampp/htdocs/college-website/img/".basename($_FILES['image']['name']);
+        $destination = "D:/xampp/htdocs/college-website/img/".basename($_FILES['image']['name']);
         
 
 

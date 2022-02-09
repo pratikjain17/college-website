@@ -65,6 +65,7 @@
                     $coursename = $row['course_name'];
                     $coursedesc = $row['course_description'];
                     $coursephoto = $row['course_photo'];
+                    // Fade in animation(gal animation) is used in courseit 
                     echo '  <div class="col-md-4 my-2" style="display:inline-block;">
                     <div class="card gal--animation gal--part'.$courseid.'" style="width: 18rem;">
                         <img src="img/'.$coursephoto.'" class="card-img-top" alt="...">

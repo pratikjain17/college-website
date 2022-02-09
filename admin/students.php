@@ -39,7 +39,7 @@
     session_start();
     echo '  <nav class="navbar navbar-dark bg-primary">
         <a class="navbar-brand" href="/college-website/index.php">
-            <h2><i class="fas fa-school"></i> NMS</h2>
+            <h2><i class="fas fa-school"></i> DC SOLUTION</h2>
         </a>';
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
         echo '<form class="form-inline my-2 my-lg-0" method="get">

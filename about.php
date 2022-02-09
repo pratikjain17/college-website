@@ -35,21 +35,19 @@
         <div class="display-image">
             <img src="https://source.unsplash.com/2400x800/?school" alt="">
         </div>
-        <div class="container py-4 my-4">
+        <div class="container py-3 my-3">
             <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-10 col-sm-6 col-xs-12">
                     <div class="aboutus">
                         <h2 class="aboutus-title" style="font-size: 50px;">About Us</h2>
-                        <p class="aboutus-text"> As an institution its purpose is to impart quality education to students of all creeds in general and the Gujarati Linguistic Minority in particular. <br>
-                         The college strives to develop the intellectual powers of students and all concerned, continuously and consistently through methods that are participative, interactive and facilitative in a measurable manner. Also to train them to be responsible and worthy citizens by adopting change in its path.
-                            The college offers a number of traditional and self financing under graduate and post graduate courses that are affiliated to University Of Mumbai, imparting education to about 7,000 students who reside in and around this fast growing suburb. A perfect blend of dedicated and forward looking Management and committed Teaching and Non Teaching Staff have ensured that the college is on the right trend and have steered it in the right direction.
-                            The greatest strength of the college is that it is managed by academicians, who not only understand and respect the value of education and educationists but also believe that knowledge is power and the value of knowledge lies not in its accumulation but in its utilization.</p>
+                        <p class="aboutus-text">  <br>
+                         </p>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <!-- <div class="col-md-2 col-sm-6 col-xs-12">
 
-                </div>
-                <div class="col-md-5 col-sm-6 col-xs-12">
+                </div> -->
+                <div class="col-md-1 col-sm-6 col-xs-12">
                     <div class="feature">
                         <div class="feature-box">
                             <div class="clearfix">

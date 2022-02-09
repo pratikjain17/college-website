@@ -37,7 +37,7 @@
     session_start();
     echo '  <nav class="navbar navbar-dark bg-primary">
         <a class="navbar-brand" href="">
-            <h2><i class="fas fa-school"></i> NMS</h2>
+            <h2><i class="fas fa-school"></i> DC SOLUTIONS </h2>
         </a>';
     if (isset($_SESSION['adminloggedin']) && $_SESSION['adminloggedin'] == true) {
         echo '<form class="form-inline my-2 my-lg-0" method="get">

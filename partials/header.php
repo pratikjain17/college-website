@@ -3,7 +3,7 @@ session_start();
 echo ' <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php">
-            <h4><i class="fas fa-school"></i> NMS</h4>
+            <h4><i class="fas fa-school"></i>DC SOLUTION</h4>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -34,9 +34,8 @@ echo ' <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 </li>
             </ul>';
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-    echo '<form class="form-inline my-2 my-lg-0" action="search.php" method="get">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" name="query" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    echo '
+                
                 <p class = "my-2 mx-2" style="color:white;">Welcome <br>' . $_SESSION['studentusername'] . '</p>
                 <a href = "partials/_logout.php" class="btn btn-danger ml-2">Logout</a>
               </form>';

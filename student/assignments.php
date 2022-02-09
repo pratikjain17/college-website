@@ -39,7 +39,7 @@
     session_start();
     echo '  <nav class="navbar navbar-dark bg-primary">
         <a class="navbar-brand" href="/college-website/index.php">
-            <h2><i class="fas fa-school"></i> NMS</h2>
+            <h2><i class="fas fa-school"></i> DC SOLUTIONS </h2>
         </a>';
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
         echo '<form class="form-inline my-2 my-lg-0" method="get">
@@ -82,10 +82,10 @@
                     <a href="../notes/' . $notesFile . '" class="list-group-item list-group-item-action flex-column align-items-start active bg-primary">
                   <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1"><strong>' . $notesTilte . '</strong></h5>
-                    <small>by NMS</small>
+                    <small>by DC SOLUTIONS</small>
                   </div>
                   <p class="mb-1">' . $notesDesc . '</p>
-                  <small>Donec id elit non mi porta.</small>
+                  <small></small>
                 </a>
               </div>';
                     }
